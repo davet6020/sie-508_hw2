@@ -1,2 +1,2 @@
-# -sie-508_hw2
+# sie-508_hw2
 hw2 game object
