@@ -1,32 +1,31 @@
-from Object import Object
-from pprint import pprint
-avatars = []
-
 class Game:
+  all_avatars = {}
 
   def __init__(self):
-    self.avatars = Object()
+    self.one_avatar = None
 
   # Initialize an internal empty list of objects
   def start_game(self):
-    self.avatars = avatars
+    self.all_avatars = self.all_avatars
 
   # Add one avatar at a time to the avatars object
-  def add_avatar(self, name, avatar):
-    avatars.append(avatar)
-    self.avatars.name = name
+  def add_avatar(self, one_avatar):
+    self.one_avatar = one_avatar
+    # Get the keys/values from one_avatar and put them into list d
+    d = [self.one_avatar.av_list()]
+    # add name of one_avatar as key and d as value
+    self.all_avatars[self.one_avatar.av_name()] = d
 
+  # Print out all current game avatars
   def animate_all_avatars(self):
-    self.avatars = avatars
+    if self.all_avatars:
+      print('--- All Game Avatars ---')
+      for key, val in self.all_avatars.items():
+        for av in val:
+          print("".join(map(str, av)))
+    else:
+      print('--- Game Over ---')
 
-    for avatar in self.avatars:
-      print('Name:{}  Hat:{}  Haircolor:{}  Height:{}  Gender:{}  Superpower:{}'.format(
-        avatar.name, avatar.hat, avatar.haircolor, str(avatar.height),
-        avatar.gender, avatar.superpower))
-
-  def remove_all_avatars(self):
-    pass
-
+  # When game is stopped, clear the internal list of avatars
   def stop_game(self):
-    avatars.clear()
-    self.avatars = avatars
+    self.all_avatars.clear()

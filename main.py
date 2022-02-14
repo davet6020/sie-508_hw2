@@ -1,8 +1,5 @@
 from Avatar import Avatar
 from Game import Game
-from Object import Object
-from pprint import pprint
-
 
 # Create four avatars
 luigi = Avatar('Luigi', 'green', 'brown', 5, 'male', 'Vicious Vortex')
@@ -10,16 +7,29 @@ mario = Avatar('Mario', 'red', 'brown', 5, 'male', 'Fireballs')
 wario = Avatar('Wario', 'yellow', 'brown', 5, 'male', 'Dash Attack')
 waluigi = Avatar('Waluigi', 'purple', 'brown', 5, 'male', 'Drop Rocket')
 
-# Create super_mario object and append the four avatars to it
-super_mario = Object()
-super_mario.luigi = luigi
-super_mario.mario = mario
-super_mario.wario = wario
-super_mario.waluigi = waluigi
+# Animate one avatar
+wario.animate_avatar()
+# Change avatar superpower
+wario.change_superpower('Disguise')
+# See superpower is differet
+wario.animate_avatar()
 
+# Instantiate game obj
 game = Game()
-game.add_avatar('luigi', luigi)
-game.add_avatar('wario', wario)
-game.animate_all_avatars()
 
+# Add the avatars to game one at a time.
+game.add_avatar(luigi)
+game.add_avatar(mario)
+game.add_avatar(wario)
+game.add_avatar(waluigi)
+
+# Create super_mario object by making it equal game()
+super_mario = game
+
+# Animate all avatars via super_mario object
+super_mario.animate_all_avatars()
+
+# Stop game and clear all_avatar list
 game.stop_game()
+# Animate will show no values other than game over
+game.animate_all_avatars()
