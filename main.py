@@ -2,10 +2,10 @@ from Avatar import Avatar
 from Game import Game
 
 # Create four avatars
-luigi = Avatar('Luigi', 'green', 'brown', 5, 'male', 'Vicious Vortex')
-mario = Avatar('Mario', 'red', 'brown', 5, 'male', 'Fireballs')
-wario = Avatar('Wario', 'yellow', 'brown', 5, 'male', 'Dash Attack')
-waluigi = Avatar('Waluigi', 'purple', 'brown', 5, 'male', 'Drop Rocket')
+luigi = Avatar('Luigi', 'green', 'brown', "5'2", 'male', 'Vicious Vortex')
+mario = Avatar('Mario', 'red', 'brown', "5'1", 'male', 'Fireballs')
+wario = Avatar('Wario', 'yellow', 'brown', "5'9", 'male', 'Dash Attack')
+waluigi = Avatar('Waluigi', 'purple', 'brown', "7'7", 'male', 'Drop Rocket')
 
 # Animate one avatar
 wario.animate_avatar()
