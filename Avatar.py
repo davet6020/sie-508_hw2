@@ -9,11 +9,11 @@ class Avatar:
     self.superpower = superpower
 
   # Change the current avatar superpower
-  def change_superpower(self, superpower):
+  def change_superpower(self, superpower: str):
     self.superpower = superpower
 
   # Change the current avatar haircolor
-  def change_haircolor(self, haircolor):
+  def change_haircolor(self, haircolor: str):
     self.haircolor = haircolor
 
   # Prints out the current avatar information
