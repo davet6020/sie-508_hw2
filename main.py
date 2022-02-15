@@ -11,7 +11,8 @@ waluigi = Avatar('Waluigi', 'purple', 'brown', "7'7", 'male', 'Drop Rocket')
 wario.animate_avatar()
 # Change avatar superpower
 wario.change_superpower('Disguise')
-# See superpower is differet
+wario.change_haircolor('green')
+# See superpower and haircolor is different
 wario.animate_avatar()
 
 # Instantiate game obj
